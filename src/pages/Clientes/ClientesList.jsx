@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { 
   getClientes, createCliente, updateCliente, deleteCliente 
@@ -7,7 +6,7 @@ import ClienteForm from './ClienteForm.jsx';
 
 import { 
   Typography, Table, TableBody, TableCell, TableContainer, 
-  TableHead, TableRow, Paper, Button, Box, IconButton, Tooltip
+  TableHead, TableRow, Paper, Button, Box, IconButton, Tooltip, Toolbar
 } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
@@ -16,7 +15,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 function ClientesList() {
   const [clientes, setClientes] = useState([]);
   const [error, setError] = useState('');
-  
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [clienteSelecionado, setClienteSelecionado] = useState(null);
 
@@ -130,7 +128,6 @@ function ClientesList() {
         </TableContainer>
       </Paper>
 
-      {}
       <ClienteForm 
         open={isModalOpen}
         handleClose={handleCloseModal}

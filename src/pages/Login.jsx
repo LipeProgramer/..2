@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext.jsx';
 import { Navigate } from 'react-router-dom';
@@ -16,7 +15,6 @@ function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const { onLogin, user } = useAuth();
 
-  // Se já estiver logado, redireciona para a página principal
   if (user) {
     return <Navigate to="/clientes" />;
   }

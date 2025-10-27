@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import {
   Modal, Box, Typography, TextField, Button, 
@@ -61,7 +60,7 @@ function ClienteForm({ open, handleClose, cliente, onSave }) {
         <TextField name="cnpj" label="CNPJ" value={formData.cnpj} onChange={handleChange} fullWidth required margin="normal" />
         <TextField name="responsavel_nome" label="Nome do Responsável" value={formData.responsavel_nome} onChange={handleChange} fullWidth required margin="normal" />
         <TextField name="responsavel_email" label="Email do Responsável" value={formData.responsavel_email} type="email" onChange={handleChange} fullWidth required margin="normal" />
-        <TextField name="responsavel_telefone" label="Telefone (Opcional)" value={formData.responsavel_telefone} onChange={handleChange} fullWidth margin="normal" />
+        <TextField name="responsavel_telefone" label="Telefone (Opcional)" value={formData.responsavel_telefone || ''} onChange={handleChange} fullWidth margin="normal" />
         
         <Box sx={{ mt: 3, display: 'flex', justifyContent: 'flex-end', gap: 1 }}>
           <Button onClick={handleClose} disabled={isLoading}>Cancelar</Button>
